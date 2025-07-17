@@ -122,7 +122,7 @@
     <section id="summary">
         <div class="container">
             <h2>Project Impact</h2>
-            <p>This project demonstrates how machine learning can reduce drilling costs by over <strong>$8.27 million</strong> by optimizing the Rate of Penetration (ROP). Given that drilling is a primary cost in the oil and gas industry, this data-driven solution offers a significant leap in efficiency. Traditional engineering models for ROP prediction, such as the Maurer and B&Y models, have notable limitations, with observed mean errors of 134.0% and 48.6%, respectively. This work introduces a robust machine learning framework that not only predicts ROP with far greater accuracy but also provides a systematic approach to optimize controllable drilling parameters for maximum efficiency and cost savings.</p>
+            <p>This project shows how machine learning can reduce drilling costs by over <strong>$8.27 million</strong> by optimizing the Rate of Penetration (ROP). Since drilling is a major expense in the oil and gas industry, this data-driven approach offers a significant improvement in efficiency. Traditional ROP prediction models, such as the Maurer and B&Y models, have substantial limitations, with mean errors of 134.0% and 48.6%, respectively. This work introduces a machine learning framework that delivers much more accurate ROP predictions and provides a clear method for optimizing controllable drilling parameters to maximize efficiency and reduce costs.</p>
         </div>
     </section>
     
@@ -146,7 +146,7 @@
                 </div>
                 <div class="card">
                     <h3>4. Optimization</h3>
-                    <p><strong>Particle Swarm Optimization (PSO)</strong>, a powerful metaheuristic algorithm, was applied to the trained machine learning model. PSO systematically searched for the optimal combination of controllable parameters—such as RPM, and Surface Weight on Bit (SWOB)—to maximize the predicted ROP at different depths and geological conditions.</p>
+                    <p><strong>Multi-Objective Particle Swarm Optimization (MOPSO)</strong>, a powerful metaheuristic algorithm, was applied to the trained machine learning model to identify the optimal combination of controllable parameters—such as RPM and Surface Weight on Bit (SWOB). MOPSO systematically searched for solutions that maximize the predicted ROP while simultaneously optimizing other objectives, such as minimizing energy consumption, across different depths and geological conditions. </p>
                 </div>
             </div>
         </div>
@@ -175,7 +175,7 @@
             <div class="result-entry">
                 <div class="result-text">
                     <h3>Correlation Analysis</h3>
-                    <p>The Spearman Correlation Heat Map effectively demonstrates the relationships between variables. It reveals strong positive correlations between ROP and key controllable parameters like <strong>Surface Weight on Bit (SWOB)</strong> and <strong>Rotations Per Minute (RPM)</strong>. This is expected, as increasing the weight on the bit and the rotational speed are primary methods for enhancing drilling speed. The heatmap also shows inter-correlations between other variables, which informed the feature engineering and selection process.</p>
+                    <p>The Spearman Correlation Heat Map clearly illustrates the relationships between variables in drilling operations. It shows strong positive correlations between ROP and key controllable parameters like <strong>Surface Weight on Bit (SWOB)</strong> and <strong>Equivalent Circulating Density (ECD)</strong>. This is expected, as increasing SWOB directly increases the force on the drill bit, accelerating the drilling process. ECD also supports faster drilling by maintaining wellbore pressure, ensuring stability, and aiding in hole cleaning.</p>
                 </div>
                 <div>
                     <img src="spearman_heatmap.png" alt="Spearman Correlation Heatmap">
@@ -185,8 +185,8 @@
             
             <div class="result-entry">
                 <div class="result-text">
-                    <h3>Model Accuracy ($R^2$ = 0.85)</h3>
-                    <p>The scatter plot of predicted versus actual ROP values provides a clear visual confirmation of the model's high accuracy. The coefficient of determination ($R^2$) of <strong>0.85</strong> indicates that 85% of the variance in the actual ROP can be explained by the model's predictions. The tight clustering of data points around the "Perfect Prediction" line demonstrates the model's reliability and robustness for forecasting drilling performance.</p>
+                    <h3>Model Accuracy (R<sup>2</sup> = 0.85)</h3>
+                    <p>The scatter plot comparing predicted and actual ROP values clearly illustrates the model's high accuracy.An R<sup>2</sup> of <strong>0.85</strong>  shows that 85% of the variation in actual ROP is explained by the model’s predictions. The close clustering of data points along the "Perfect Prediction" line highlights the model’s reliability and robustness in forecasting drilling performance.</p>
                 </div>
                 <div>
                     <img src="r_squared_scatterplot.png" alt="ROP Test Predictions vs Actual Values">
@@ -202,14 +202,16 @@
             <div class="result-entry">
                 <div class="result-text">
                     <h3>Claystone Formation</h3>
-                    <p>The optimization trade-off analysis for the claystone section identified the following optimal parameters to maximize the Rate of Penetration (ROP):</p>
+                    <p>The optimization trade-off analysis for the claystone section identified the following optimal parameters to maximize ROP:</p>
                     <ul>
                         <li><strong>RPM:</strong> 150</li>
-                        <li><strong>SWOB:</strong> 12 </li>
+                        <li><strong>SWOB:</strong> 11.6</li>
                         <li><strong>HKLA:</strong> 140</li>
-                        <li><strong>STOR:</strong> 18</li>
+                        <li><strong>STOR:</strong> 19</li>
+                        <li><strong>RPM:</strong> 265</li>
+                        <li><strong>RPM:</strong> 3310</li>
                     </ul>
-                    <p>These parameters achieve a predicted ROP of <strong>72.00</strong> with a Mean Squared Error (MSE) of 31890.33. The analysis shows the delicate balance required to maximize drilling speed while managing operational constraints.</p>
+                    <p>These parameters achieve a predicted ROP of <strong>72.00</strong> m/hr with a Mechanical Specific Energy (MSE) of 31890.33 psi. The analysis shows the delicate balance required to maximize drilling speed while minimizing energy consumption.</p>
                 </div>
                 <div>
                     <img src="Optimization_Claystone.png" alt="Optimization for Claystone">
@@ -221,12 +223,14 @@
                     <h3>Limestone Formation</h3>
                     <p>For the limestone section, a different set of optimal parameters was found, reflecting the change in rock properties:</p>
                     <ul>
-                        <li><strong>RPM:</strong> 155</li>
+                        <li><strong>RPM:</strong> 160</li>
                         <li><strong>SWOB:</strong> 18</li>
-                        <li><strong>HKLA:</strong> 145</li>
-                        <li><strong>STOR:</strong> 17.5</li>
+                        <li><strong>HKLA:</strong> 144</li>
+                        <li><strong>STOR:</strong> 15</li>
+                        <li><strong>RPM:</strong> 240</li>
+                        <li><strong>RPM:</strong> 3430</li>
                     </ul>
-                    <p>These settings result in a predicted ROP of <strong>46.11</strong> and an MSE of 31055.80. This highlights the model's ability to adapt its recommendations to different geological layers, a key requirement for effective real-world application.</p>
+                    <p>These settings result in a predicted ROP of <strong>46.11</strong> m/hr and an MSE of 31055.80 psi. This highlights the model's ability to adapt its recommendations to different geological layers, a key requirement for effective real-world application.</p>
                 </div>
                 <div>
                     <img src="Optimization_Limestone.png" alt="Optimization for Limestone">
@@ -253,7 +257,7 @@
             <div class="result-entry">
                 <div class="result-text">
                     <h3>Superior Model Performance</h3>
-                    <p>The GBR model's performance was benchmarked against established industry standards. The model achieved an impressive $R^2$ value of <strong>0.85</strong>. In stark contrast, traditional models proved far less accurate, with the B&Y model yielding a mean prediction error of <strong>48.6%</strong> and Maurer's model showing a staggering <strong>134.0%</strong> error. This vast difference in performance underscores the limitations of older formulas and the clear advantage of the machine learning approach.</p>
+                    <p>The performance of the GBR model was benchmarked against established industry standards. When predicting a new well, it achieved an error of <strong>28.3%</strong>.  In comparison, traditional models were significantly less accurate: the B&Y model had a mean prediction error of <strong>48.6%</strong> while Maurer’s model showed a much higher error of <strong>134.0%</strong>. This stark contrast highlights the limitations of older formulas and the clear advantage of the machine learning approach.</p>
                 </div>
                 <div>
                     <img src="model_performance_comparison.png" alt="Comparison of ROP prediction models">
@@ -280,8 +284,8 @@
             <div class="result-entry">
                 <div class="result-text">
                     <h3>Leave-One-Well-Out (LOWO) Validation</h3>
-                    <p>To ensure the model generalizes well to new, unseen wells, a more robust validation strategy is recommended. The <strong>Leave-One-Well-Out (LOWO)</strong> cross-validation approach involves training the model on data from three of the four available wells and then testing its performance on the remaining, completely unseen well. This process is repeated for each well, providing a rigorous assessment of the model's real-world applicability.</p>
-                    <p>An initial test of this concept using a Gradient Boosting Regressor (GBR) yielded a training $R^2$ of <strong>0.76</strong> and a testing $R^2$ of <strong>0.48</strong>. While the training performance is strong, the lower test score indicates that the model's ability to generalize can be further improved. This underscores the importance of the LOWO approach in identifying and addressing potential overfitting, ensuring the developed solution is both powerful and reliable when deployed in the field.</p>
+                    <p> To improve the model’s ability to generalize to new, unseen wells, a more effective validation strategy is needed. The <strong>Leave-One-Well-Out (LOWO)</strong> cross-validation method trains the model on data from three of the four wells and tests it on the remaining, completely unseen well. This process is repeated for each well, offering a thorough evaluation of the model’s real-world performance.</p>
+                    <p>An initial test using a Gradient Boosting Regressor (GBR) produced a training R<sup>2</sup> of <strong>0.76</strong> and a testing R<sup>2</sup> of <strong>0.48</strong>. Although the training score is strong, the lower test score highlights the need to improve the model’s generalization. This emphasizes the value of the LOWO approach in detecting and addressing overfitting, ensuring the model is both effective and reliable in practical use.</p>
                 </div>
                 <div>
                     <img src="LOWO.png" alt="ROP Prediction vs. Depth with LOWO">
@@ -294,7 +298,7 @@
     <section id="conclusion">
         <div class="container" style="text-align: center;">
             <h2>Conclusion and Value Proposition</h2>
-            <p>This project successfully demonstrates that a machine learning approach, combining a Gradient Boosting model with Particle Swarm Optimization, can deliver substantial improvements to drilling operations. The key value lies in transforming historical data into a predictive tool that provides real-time, optimal drilling parameters. This not only leads to multi-million-dollar cost savings but also enhances operational stability and efficiency. The developed framework is scalable and can be adapted for different geological environments, making it a valuable asset for modern oil and gas exploration.</p>
+            <p>This project demonstrates that combining a Gradient Boosting model with Particle Swarm Optimization significantly improves drilling operations. By turning historical data into a real-time predictive tool for optimal drilling parameters, it achieves multi-million-dollar cost savings while boosting operational stability and efficiency. The scalable framework can be adapted to various geological settings, making it a valuable asset for modern oil, gas, and geothermal exploration.</p>
         </div>
     </section>
 
