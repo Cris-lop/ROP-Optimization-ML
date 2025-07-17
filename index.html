@@ -1,281 +1,258 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2299.77">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Project Portfolio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+        }
+        .result-entry {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .result-text h3 {
+            margin-top: 0;
+        }
+        .result-entry img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .caption {
+            font-style: italic;
+            text-align: center;
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            .result-entry {
+                grid-template-columns: 1fr 1.2fr; /* Text left, image right */
+            }
+            .result-entry:nth-child(even) {
+                grid-template-columns: 1.2fr 1fr; /* Image left, text right */
+            }
+            .result-entry:nth-child(even) .result-text {
+                order: 2; /* Moves text to the second column */
+            }
+        }
+    </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Master's Project Portfolio&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 1.6;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #f4f4f4;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #333;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.container {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 80%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overflow: hidden;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #333;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 2rem 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>header h1 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 2.5rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>header p {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>section {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 40px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #ddd;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h2 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 2rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.grid {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: grid;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 5px rgba(0,0,0,0.1);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.card h3 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.cta-button {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #007BFF;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-decoration: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: background 0.3s ease;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.cta-button:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #0056b3;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>footer {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: #333;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.result-entry {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: grid;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr; /* Stacks text and image on mobile */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 25px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 50px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.result-text h3 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.result-entry img {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 8px rgba(0,0,0,0.15);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.caption {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-style: italic;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 0.9rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #555;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Creates two-column layout on larger screens */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media (min-width: 768px) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.result-entry {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>grid-template-columns: 1fr 1.2fr; /* Text on left, image on right */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>/* Flips layout for every second entry */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.result-entry:nth-child(even) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>grid-template-columns: 1.2fr 1fr; /* Image on left, text on right */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.result-entry:nth-child(even) .result-text {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>order: 2; /* Moves text to the second column */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Cristian Lopez&lt;/strong&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1&gt;Improving ROP with ML: Case Study from Four Flemish Pass Wells&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="summary"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Project Impact&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>[cite_start]&lt;p&gt;This project demonstrates how machine learning can reduce drilling costs by over &lt;strong&gt;$8.27 million&lt;/strong&gt; by optimizing the Rate of Penetration (ROP)[cite: 327]. Given that drilling is a primary cost in the oil and gas industry, this data-driven solution offers a significant leap in efficiency. [cite_start]Traditional engineering models for ROP prediction, such as the Maurer and B&amp;Y models, have notable limitations, with observed mean errors of 134.0% and 48.6%, respectively[cite: 362]. This work introduces a robust machine learning framework that not only predicts ROP with far greater accuracy but also provides a systematic approach to optimize controllable drilling parameters for maximum efficiency and cost savings.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="methodology"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Methodology &amp; Process&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;The project followed a structured workflow, transforming raw well data into an actionable, optimized drilling plan.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="grid"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;1. Data and Pre-processing&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>[cite_start]&lt;p&gt;The dataset was compiled from four wells (G-92, J-31A, K67Z, C-78) in the Flemish Pass region[cite: 1, 2]. It included a comprehensive set of drilling parameters and geological information. The data was cleaned, normalized, and prepared for model training.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;2. Feature Analysis&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>[cite_start]&lt;p&gt;A detailed feature analysis was conducted using &lt;strong&gt;Spearman Correlation&lt;/strong&gt; and &lt;strong&gt;Permutation Feature Importance&lt;/strong&gt;[cite: 2, 36]. This step was crucial for identifying the most influential parameters on ROP. [cite_start]Key predictors identified include Depth, Standpipe Pressure (SPPA), and Surface Torque (STOR)[cite: 36].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;3. Model Development&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Advanced regression models, including &lt;strong&gt;Gradient Boosting&lt;/strong&gt; and &lt;strong&gt;XGBoost&lt;/strong&gt;, were developed to predict ROP. These models were chosen for their high accuracy and ability to capture complex, non-linear relationships in the data. [cite_start]The final model achieved a strong coefficient of determination ($R^2$) of &lt;strong&gt;0.85&lt;/strong&gt; on test data[cite: 62, 63].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;4. Optimization&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;Particle Swarm Optimization (PSO)&lt;/strong&gt;, a powerful metaheuristic algorithm, was applied to the trained machine learning model. [cite_start]PSO systematically searched for the optimal combination of controllable parameters—such as RPM, and Surface Weight on Bit (SWOB)—to maximize the predicted ROP at different depths and geological conditions[cite: 77, 187].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="technical-dive"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Technical Deep Dive: Feature Selection and Model Performance&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-entry"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="result-text"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Feature Importance&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>[cite_start]&lt;p&gt;The analysis of feature importance revealed that &lt;strong&gt;Depth, Standpipe Pressure (SPPA)&lt;/strong&gt;, and &lt;strong&gt;Surface Torque (STOR)&lt;/strong&gt; are the most influential predictors of ROP[cite: 36, 41, 43, 44]. This is consistent with the physics of drilling, as:&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;Depth&lt;/strong&gt; is critical because rock formations become more compacted and harder to drill with increasing depth, directly impacting ROP.&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;SPPA&lt;/strong&gt; relates to the hydraulic energy used to clean cuttings from the drill bit. Efficient cleaning prevents bit balling and allows for more effective rock cutting.&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;li&gt;&lt;strong&gt;STOR&lt;/strong&gt; measures the rotational force required to turn the drill string, which is directly related to the rock's strength and the cutting efficiency at the bit-rock interface.&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="feature_importance.png" alt="Feature importance of drilling parameters"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>[cite_start]&lt;p class="caption"&gt;Figure 1: Permutation feature importance highlights the key drivers of ROP[cite: 36].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-entry"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="result-text"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Correlation Analysis&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>[cite_start]&lt;p&gt;The Spearman Correlation Heat Map effectively demonstrates the relationships between variables[cite: 2]. [cite_start]It reveals strong positive correlations between ROP and key controllable parameters like &lt;strong&gt;Surface Weight on Bit (SWOB)&lt;/strong&gt; and &lt;strong&gt;Rotations Per Minute (RPM)&lt;/strong&gt;[cite: 2]. This is expected, as increasing the weight on the bit and the rotational speed are primary methods for enhancing drilling speed. The heatmap also shows inter-correlations between other variables, which informed the feature engineering and selection process.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="spearman_heatmap.png" alt="Spearman Correlation Heatmap"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>[cite_start]&lt;p class="caption"&gt;Figure 2: Spearman heatmap showing the relationships between drilling parameters[cite: 2].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-entry"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="result-text"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Model Accuracy (R² = 0.85)&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p&gt;The scatter plot of predicted versus actual ROP values provides a clear visual confirmation of the model's high accuracy. [cite_start]The coefficient of determination ($R^2$) of &lt;strong&gt;0.85&lt;/strong&gt; indicates that 85% of the variance in the actual ROP can be explained by the model's predictions[cite: 62, 63]. The tight clustering of data points around the "Perfect Prediction" line demonstrates the model's reliability and robustness for forecasting drilling performance.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;img src="r_squared_scatterplot.png" alt="ROP5 Test Predictions vs Actual Values"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>[cite_start]&lt;p class="caption"&gt;Figure 3: Test predictions vs. actual values, showing a high R² of 0.85[cite: 62].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>&lt;section id="results"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Showcasing the Wins&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="result-entry"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-text"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Significant Cost Reduction&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>[cite_start]&lt;p&gt;By applying the ML-optimized parameters, the simulated drilling cost was reduced from &lt;strong&gt;$16.96M&lt;/strong&gt; to &lt;strong&gt;$8.69M&lt;/strong&gt;, achieving a total saving of &lt;strong&gt;$8.27M CAD&lt;/strong&gt;[cite: 316, 327, 328]. This highlights the immense financial benefit of adopting a data-driven optimization strategy.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;img src="cost_comparison.png" alt="Cost comparison with and without ML"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>[cite_start]&lt;p class="caption"&gt;Figure 4: Drilling cost comparison before and after ML optimization[cite: 326].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="result-entry"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-text"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Superior Model Performance&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;The GBR model's performance was benchmarked against established industry standards. [cite_start]The model achieved an impressive $R^2$ value of &lt;strong&gt;0.85&lt;/strong&gt;[cite: 62]. [cite_start]In stark contrast, traditional models proved far less accurate, with the B&amp;Y model yielding a mean prediction error of &lt;strong&gt;48.6%&lt;/strong&gt; and Maurer's model showing a staggering &lt;strong&gt;134.0%&lt;/strong&gt; error[cite: 362]. This vast difference in performance underscores the limitations of older formulas and the clear advantage of the machine learning approach.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;img src="model_performance_comparison.png" alt="Comparison of ROP prediction models"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>[cite_start]&lt;p class="caption"&gt;Figure 5: The ML model (GBR) shows a much lower prediction error compared to traditional engineering models[cite: 362].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="result-entry"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="result-text"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Optimized vs. Original ROP&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;The optimization process resulted in a significantly improved ROP. [cite_start]The optimized drilling plan (shown in red) is not only higher on average but also more stable than the original, highly variable ROP (shown in blue)[cite: 287, 288]. This leads to faster, more predictable, and safer drilling operations.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;img src="rop_comparison_optimized.png" alt="Optimized ROP vs Original ROP"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>[cite_start]&lt;p class="caption"&gt;Figure 6: Comparison of original ROP against the smoother, higher optimized ROP across different geological layers[cite: 286].&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="conclusion"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="container" style="text-align: center;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Conclusion and Value Proposition&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;This project successfully demonstrates that a machine learning approach, combining a Gradient Boosting model with Particle Swarm Optimization, can deliver substantial improvements to drilling operations. The key value lies in transforming historical data into a predictive tool that provides real-time, optimal drilling parameters. This not only leads to multi-million-dollar cost savings but also enhances operational stability and efficiency. The developed framework is scalable and can be adapted for different geological environments, making it a valuable asset for modern oil and gas exploration.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;section id="code"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="container" style="text-align: center;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;View the Code&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;The complete source code for this project, including data analysis notebooks and model implementation, is available on GitHub.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;a href="https://github.com/Cris-lop/ML_ROP" class="cta-button"&gt;View on GitHub&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;Contact: cilopezcanel@mun.ca | &lt;a href="https://www.linkedin.com/in/cristian-lopez-00699a194/" style="color: #fff;"&gt;https://www.linkedin.com/in/cristian-lopez-00699a194/&lt;/a&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+    <header>
+        <div class="container">
+            <p><strong>Cristian Lopez</strong></p>
+            <h1>Improving ROP with ML: Case Study from Four Flemish Pass Wells</h1>
+        </div>
+    </header>
+
+    <section id="summary">
+        <div class="container">
+            <h2>Project Impact</h2>
+            <p>This project demonstrates how machine learning can reduce drilling costs by over <strong>$8.27 million</strong> by optimizing the Rate of Penetration (ROP). Given that drilling is a primary cost in the oil and gas industry, this data-driven solution offers a significant leap in efficiency. Traditional engineering models for ROP prediction, such as the Maurer and B&Y models, have notable limitations, with observed mean errors of 134.0% and 48.6%, respectively. This work introduces a robust machine learning framework that not only predicts ROP with far greater accuracy but also provides a systematic approach to optimize controllable drilling parameters for maximum efficiency and cost savings.</p>
+        </div>
+    </section>
+    
+    <section id="methodology">
+        <div class="container">
+            <h2>Methodology & Process</h2>
+            <p>The project followed a structured workflow, transforming raw well data into an actionable, optimized drilling plan.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>1. Data and Pre-processing</h3>
+                    <p>The dataset was compiled from four wells (G-92, J-31A, K67Z, C-78) in the Flemish Pass region. It included a comprehensive set of drilling parameters and geological information. The data was cleaned, normalized, and prepared for model training.</p>
+                </div>
+                <div class="card">
+                    <h3>2. Feature Analysis</h3>
+                    <p>A detailed feature analysis was conducted using <strong>Spearman Correlation</strong> and <strong>Permutation Feature Importance</strong>. This step was crucial for identifying the most influential parameters on ROP. Key predictors identified include Depth, Standpipe Pressure (SPPA), and Surface Torque (STOR).</p>
+                </div>
+                <div class="card">
+                    <h3>3. Model Development</h3>
+                    <p>Advanced regression models, including <strong>Gradient Boosting</strong> and <strong>XGBoost</strong>, were developed to predict ROP. These models were chosen for their high accuracy and ability to capture complex, non-linear relationships in the data. The final model achieved a strong coefficient of determination ($R^2$) of <strong>0.85</strong> on test data.</p>
+                </div>
+                <div class="card">
+                    <h3>4. Optimization</h3>
+                    <p><strong>Particle Swarm Optimization (PSO)</strong>, a powerful metaheuristic algorithm, was applied to the trained machine learning model. PSO systematically searched for the optimal combination of controllable parameters—such as RPM, and Surface Weight on Bit (SWOB)—to maximize the predicted ROP at different depths and geological conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technical-dive">
+        <div class="container">
+            <h2>Technical Deep Dive: Feature Selection and Model Performance</h2>
+    
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Feature Importance</h3>
+                    <p>The analysis of feature importance revealed that <strong>Depth, Standpipe Pressure (SPPA)</strong>, and <strong>Surface Torque (STOR)</strong> are the most influential predictors of ROP. This is consistent with the physics of drilling, as:</p>
+                    <ul>
+                        <li><strong>Depth</strong> is critical because rock formations become more compacted and harder to drill with increasing depth, directly impacting ROP.</li>
+                        <li><strong>SPPA</strong> relates to the hydraulic energy used to clean cuttings from the drill bit. Efficient cleaning prevents bit balling and allows for more effective rock cutting.</li>
+                        <li><strong>STOR</strong> measures the rotational force required to turn the drill string, which is directly related to the rock's strength and the cutting efficiency at the bit-rock interface.</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="feature_importance.png" alt="Feature importance of drilling parameters">
+                    <p class="caption">Figure 1: Permutation feature importance highlights the key drivers of ROP.</p>
+                </div>
+            </div>
+    
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Correlation Analysis</h3>
+                    <p>The Spearman Correlation Heat Map effectively demonstrates the relationships between variables. It reveals strong positive correlations between ROP and key controllable parameters like <strong>Surface Weight on Bit (SWOB)</strong> and <strong>Rotations Per Minute (RPM)</strong>. This is expected, as increasing the weight on the bit and the rotational speed are primary methods for enhancing drilling speed. The heatmap also shows inter-correlations between other variables, which informed the feature engineering and selection process.</p>
+                </div>
+                <div>
+                    <img src="spearman_heatmap.png" alt="Spearman Correlation Heatmap">
+                    <p class="caption">Figure 2: Spearman heatmap showing the relationships between drilling parameters.</p>
+                </div>
+            </div>
+            
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Model Accuracy ($R^2$ = 0.85)</h3>
+                    <p>The scatter plot of predicted versus actual ROP values provides a clear visual confirmation of the model's high accuracy. The coefficient of determination ($R^2$) of <strong>0.85</strong> indicates that 85% of the variance in the actual ROP can be explained by the model's predictions. The tight clustering of data points around the "Perfect Prediction" line demonstrates the model's reliability and robustness for forecasting drilling performance.</p>
+                </div>
+                <div>
+                    <img src="r_squared_scatterplot.png" alt="ROP Test Predictions vs Actual Values">
+                    <p class="caption">Figure 3: Test predictions vs. actual values, showing a high R² of 0.85.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results">
+        <div class="container">
+            <h2>Showcasing the Wins</h2>
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Significant Cost Reduction</h3>
+                    <p>By applying the ML-optimized parameters, the simulated drilling cost was reduced from <strong>$16.96M</strong> to <strong>$8.69M</strong>, achieving a total saving of <strong>$8.27M CAD</strong>. This highlights the immense financial benefit of adopting a data-driven optimization strategy.</p>
+                </div>
+                <div>
+                    <img src="cost_comparison.png" alt="Cost comparison with and without ML">
+                    <p class="caption">Figure 4: Drilling cost comparison before and after ML optimization.</p>
+                </div>
+            </div>
+            
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Superior Model Performance</h3>
+                    <p>The GBR model's performance was benchmarked against established industry standards. The model achieved an impressive $R^2$ value of <strong>0.85</strong>. In stark contrast, traditional models proved far less accurate, with the B&Y model yielding a mean prediction error of <strong>48.6%</strong> and Maurer's model showing a staggering <strong>134.0%</strong> error. This vast difference in performance underscores the limitations of older formulas and the clear advantage of the machine learning approach.</p>
+                </div>
+                <div>
+                    <img src="model_performance_comparison.png" alt="Comparison of ROP prediction models">
+                    <p class="caption">Figure 5: The ML model (GBR) shows a much lower prediction error compared to traditional engineering models.</p>
+                </div>
+            </div>
+            
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Optimized vs. Original ROP</h3>
+                    <p>The optimization process resulted in a significantly improved ROP. The optimized drilling plan (shown in red) is not only higher on average but also more stable than the original, highly variable ROP (shown in blue). This leads to faster, more predictable, and safer drilling operations.</p>
+                </div>
+                <div>
+                    <img src="rop_comparison_optimized.png" alt="Optimized ROP vs Original ROP">
+                    <p class="caption">Figure 6: Comparison of original ROP against the smoother, higher optimized ROP across different geological layers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusion">
+        <div class="container" style="text-align: center;">
+            <h2>Conclusion and Value Proposition</h2>
+            <p>This project successfully demonstrates that a machine learning approach, combining a Gradient Boosting model with Particle Swarm Optimization, can deliver substantial improvements to drilling operations. The key value lies in transforming historical data into a predictive tool that provides real-time, optimal drilling parameters. This not only leads to multi-million-dollar cost savings but also enhances operational stability and efficiency. The developed framework is scalable and can be adapted for different geological environments, making it a valuable asset for modern oil and gas exploration.</p>
+        </div>
+    </section>
+
+    <section id="code">
+        <div class="container" style="text-align: center;">
+            <h2>View the Code</h2>
+            <p>The complete source code for this project, including data analysis notebooks and model implementation, is available on GitHub.</p>
+            <a href="https://github.com/Cris-lop/ML_ROP" class="cta-button">View on GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Contact: cilopezcanel@mun.ca | <a href="https://www.linkedin.com/in/cristian-lopez-00699a194/" style="color: #fff;">LinkedIn Profile</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>
