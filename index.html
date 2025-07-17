@@ -159,7 +159,7 @@
             <div class="result-entry">
                 <div class="result-text">
                     <h3>Feature Importance</h3>
-                    <p>The analysis of feature importance revealed that <strong>Depth, Standpipe Pressure (SPPA)</strong>, and <strong>Surface Torque (STOR)</strong> are the most influential predictors of ROP. This is consistent with the physics of drilling, as:</p>
+                    <p>The analysis of feature importance revealed that <strong>Depth, Standpipe Pressure (SPPA)</strong>, and <strong>STOR</strong> are the most influential predictors of ROP. This is consistent with the physics of drilling, as:</p>
                     <ul>
                         <li><strong>Depth</strong> is critical because rock formations become more compacted and harder to drill with increasing depth, directly impacting ROP.</li>
                         <li><strong>SPPA</strong> relates to the hydraulic energy used to clean cuttings from the drill bit. Efficient cleaning prevents bit balling and allows for more effective rock cutting.</li>
@@ -208,10 +208,10 @@
                         <li><strong>SWOB:</strong> 11.6</li>
                         <li><strong>HKLA:</strong> 140</li>
                         <li><strong>STOR:</strong> 19</li>
-                        <li><strong>RPM:</strong> 265</li>
-                        <li><strong>RPM:</strong> 3310</li>
+                        <li><strong>SPPA:</strong> 265</li>
+                        <li><strong>TFLO:</strong> 3310</li>
                     </ul>
-                    <p>These parameters achieve a predicted ROP of <strong>72.00</strong> m/hr with a Mechanical Specific Energy (MSE) of 31890.33 psi. The analysis shows the delicate balance required to maximize drilling speed while minimizing energy consumption.</p>
+                    <p>These parameters achieve a predicted ROP of <strong>72.00</strong> m/hr with a Mechanical Specific Energy (MSE) of 31890.33 psi. The analysis shows the delicate balance required to maximize drilling speed while minimizing energy consumption. Note TFLO = Total flow rate of all active pumps (L/min) </p>
                 </div>
                 <div>
                     <img src="Optimization_Claystone.png" alt="Optimization for Claystone">
@@ -227,8 +227,8 @@
                         <li><strong>SWOB:</strong> 18</li>
                         <li><strong>HKLA:</strong> 144</li>
                         <li><strong>STOR:</strong> 15</li>
-                        <li><strong>RPM:</strong> 240</li>
-                        <li><strong>RPM:</strong> 3430</li>
+                        <li><strong>SPPA:</strong> 240</li>
+                        <li><strong>TFLO:</strong> 3430</li>
                     </ul>
                     <p>These settings result in a predicted ROP of <strong>46.11</strong> m/hr and an MSE of 31055.80 psi. This highlights the model's ability to adapt its recommendations to different geological layers, a key requirement for effective real-world application.</p>
                 </div>
