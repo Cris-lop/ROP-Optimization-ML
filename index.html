@@ -185,12 +185,52 @@
             
             <div class="result-entry">
                 <div class="result-text">
-                    <h3>Model Accuracy (R<sup>2</sup> = 0.85)</h3>
+                    <h3>Model Accuracy ($R^2$ = 0.85)</h3>
                     <p>The scatter plot of predicted versus actual ROP values provides a clear visual confirmation of the model's high accuracy. The coefficient of determination ($R^2$) of <strong>0.85</strong> indicates that 85% of the variance in the actual ROP can be explained by the model's predictions. The tight clustering of data points around the "Perfect Prediction" line demonstrates the model's reliability and robustness for forecasting drilling performance.</p>
                 </div>
                 <div>
                     <img src="r_squared_scatterplot.png" alt="ROP Test Predictions vs Actual Values">
                     <p class="caption">Figure 3: Test predictions vs. actual values, showing a high R² of 0.85.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="optimization-analysis">
+        <div class="container">
+            <h2>Optimization Analysis</h2>
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Claystone Formation</h3>
+                    <p>The optimization trade-off analysis for the claystone section identified the following optimal parameters to maximize the Rate of Penetration (ROP):</p>
+                    <ul>
+                        <li><strong>RPM:</strong> 150</li>
+                        <li><strong>SWOB:</strong> 12 </li>
+                        <li><strong>HKLA:</strong> 140</li>
+                        <li><strong>STOR:</strong> 18</li>
+                    </ul>
+                    <p>These parameters achieve a predicted ROP of <strong>72.00</strong> with a Mean Squared Error (MSE) of 31890.33. The analysis shows the delicate balance required to maximize drilling speed while managing operational constraints.</p>
+                </div>
+                <div>
+                    <img src="Optimization_Claystone.png" alt="Optimization for Claystone">
+                    <p class="caption">Figure 7: Optimization trade-off analysis for the claystone section.</p>
+                </div>
+            </div>
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Limestone Formation</h3>
+                    <p>For the limestone section, a different set of optimal parameters was found, reflecting the change in rock properties:</p>
+                    <ul>
+                        <li><strong>RPM:</strong> 155</li>
+                        <li><strong>SWOB:</strong> 18</li>
+                        <li><strong>HKLA:</strong> 145</li>
+                        <li><strong>STOR:</strong> 17.5</li>
+                    </ul>
+                    <p>These settings result in a predicted ROP of <strong>46.11</strong> and an MSE of 31055.80. This highlights the model's ability to adapt its recommendations to different geological layers, a key requirement for effective real-world application.</p>
+                </div>
+                <div>
+                    <img src="Optimization_Limestone.png" alt="Optimization for Limestone">
+                    <p class="caption">Figure 8: Optimization trade-off analysis for the limestone section.</p>
                 </div>
             </div>
         </div>
@@ -229,6 +269,23 @@
                 <div>
                     <img src="rop_comparison_optimized.png" alt="Optimized ROP vs Original ROP">
                     <p class="caption">Figure 6: Comparison of original ROP against the smoother, higher optimized ROP across different geological layers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="future-recommendations">
+        <div class="container">
+            <h2>Future Recommendations</h2>
+            <div class="result-entry">
+                <div class="result-text">
+                    <h3>Leave-One-Well-Out (LOWO) Validation</h3>
+                    <p>To ensure the model generalizes well to new, unseen wells, a more robust validation strategy is recommended. The <strong>Leave-One-Well-Out (LOWO)</strong> cross-validation approach involves training the model on data from three of the four available wells and then testing its performance on the remaining, completely unseen well. This process is repeated for each well, providing a rigorous assessment of the model's real-world applicability.</p>
+                    <p>An initial test of this concept using a Gradient Boosting Regressor (GBR) yielded a training $R^2$ of <strong>0.76</strong> and a testing $R^2$ of <strong>0.48</strong>. While the training performance is strong, the lower test score indicates that the model's ability to generalize can be further improved. This underscores the importance of the LOWO approach in identifying and addressing potential overfitting, ensuring the developed solution is both powerful and reliable when deployed in the field.</p>
+                </div>
+                <div>
+                    <img src="LOWO.png" alt="ROP Prediction vs. Depth with LOWO">
+                    <p class="caption">Figure 9: ROP prediction vs. depth, illustrating the results of a Leave-One-Well-Out validation test.</p>
                 </div>
             </div>
         </div>
