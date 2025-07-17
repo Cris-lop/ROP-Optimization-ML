@@ -211,11 +211,11 @@
                         <li><strong>SPPA:</strong> 265</li>
                         <li><strong>TFLO:</strong> 3310</li>
                     </ul>
-                    <p>These parameters achieve a predicted ROP of <strong>72.00</strong> m/hr with a Mechanical Specific Energy (MSE) of 31890.33 psi. The analysis shows the delicate balance required to maximize drilling speed while minimizing energy consumption. Note TFLO = Total flow rate of all active pumps (L/min) </p>
+                    <p>These parameters achieve a predicted ROP of <strong>72.00</strong> m/hr with a Mechanical Specific Energy (MSE) of 31890.33 psi. The analysis reflects an algorithmic decision to strike a careful balance between maximizing drilling speed and minimizing energy use. Specifically, the MOPSO algorithm identified and selected the point nearest the "knee" of the curve, representing the most balanced trade-off. Note TFLO = Total flow rate of all active pumps (L/min) </p>
                 </div>
                 <div>
                     <img src="Optimization_Claystone.png" alt="Optimization for Claystone">
-                    <p class="caption">Figure 7: Optimization trade-off analysis for the claystone section.</p>
+                    <p class="caption">Figure 4: Optimization trade-off analysis for the claystone section.</p>
                 </div>
             </div>
             <div class="result-entry">
@@ -234,7 +234,7 @@
                 </div>
                 <div>
                     <img src="Optimization_Limestone.png" alt="Optimization for Limestone">
-                    <p class="caption">Figure 8: Optimization trade-off analysis for the limestone section.</p>
+                    <p class="caption">Figure 5: Optimization trade-off analysis for the limestone section.</p>
                 </div>
             </div>
         </div>
@@ -250,18 +250,18 @@
                 </div>
                 <div>
                     <img src="cost_comparison.png" alt="Cost comparison with and without ML">
-                    <p class="caption">Figure 4: Drilling cost comparison before and after ML optimization.</p>
+                    <p class="caption">Figure 6: Drilling cost comparison before and after ML optimization.</p>
                 </div>
             </div>
             
             <div class="result-entry">
                 <div class="result-text">
                     <h3>Superior Model Performance</h3>
-                    <p>The performance of the GBR model was benchmarked against established industry standards. When predicting a new well, it achieved an error of <strong>28.3%</strong>.  In comparison, traditional models were significantly less accurate: the B&Y model had a mean prediction error of <strong>48.6%</strong> while Maurer’s model showed a much higher error of <strong>134.0%</strong>. This stark contrast highlights the limitations of older formulas and the clear advantage of the machine learning approach.</p>
+                    <p>The performance of the GBR model was benchmarked against established industry standards. When predicting a new well, it achieved an error of <strong>28.3%</strong>.  In comparison, traditional models were significantly less accurate: the B&Y model had a mean prediction error of <strong>48.6%</strong> while Maurer’s model showed a much higher error of <strong>134.0%</strong>. This stark contrast highlights the limitations of older formulas and the clear advantage of the machine learning approach. Note that </p>
                 </div>
                 <div>
                     <img src="model_performance_comparison.png" alt="Comparison of ROP prediction models">
-                    <p class="caption">Figure 5: The ML model (GBR) shows a much lower prediction error compared to traditional engineering models.</p>
+                    <p class="caption">Figure 7: The ML model (GBR) shows a much lower prediction error compared to traditional engineering models.</p>
                 </div>
             </div>
             
@@ -272,7 +272,7 @@
                 </div>
                 <div>
                     <img src="rop_comparison_optimized.png" alt="Optimized ROP vs Original ROP">
-                    <p class="caption">Figure 6: Comparison of original ROP against the smoother, higher optimized ROP across different geological layers.</p>
+                    <p class="caption">Figure 8: Comparison of original ROP against the smoother, higher optimized ROP across different geological layers.</p>
                 </div>
             </div>
         </div>
@@ -285,7 +285,7 @@
                 <div class="result-text">
                     <h3>Leave-One-Well-Out (LOWO) Validation</h3>
                     <p> To improve the model’s ability to generalize to new, unseen wells, a more effective validation strategy is needed. The <strong>Leave-One-Well-Out (LOWO)</strong> cross-validation method trains the model on data from three of the four wells and tests it on the remaining, completely unseen well. This process is repeated for each well, offering a thorough evaluation of the model’s real-world performance.</p>
-                    <p>An initial test using a Gradient Boosting Regressor (GBR) produced a training R<sup>2</sup> of <strong>0.76</strong> and a testing R<sup>2</sup> of <strong>0.48</strong>. Although the training score is strong, the lower test score highlights the need to improve the model’s generalization. This emphasizes the value of the LOWO approach in detecting and addressing overfitting, ensuring the model is both effective and reliable in practical use.</p>
+                    <p>An initial test using a Gradient Boosting Regressor (GBR) produced a training R<sup>2</sup> of <strong>0.76</strong> and a testing R<sup>2</sup> of <strong>0.48</strong>. An R<sup>2</sup> of 0.85 was achieved using a standard random train-test split on the combined dataset, indicating the model’s ability to learn patterns from that data. In contrast, the more rigorous LOWO validation, which tests generalization to entirely new wells, yielded a lower R<sup>2</sup> of 0.48. This gap underscores the need to improve the model’s generalization capabilities. While the high training score reflects strong learning, the drop in performance during LOWO validation reveals potential overfitting. This highlights the importance of the LOWO approach in identifying and addressing such issues, ensuring the model remains effective and reliable in real-world applications.</p>
                 </div>
                 <div>
                     <img src="LOWO.png" alt="ROP Prediction vs. Depth with LOWO">
