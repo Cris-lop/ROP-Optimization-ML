@@ -278,23 +278,6 @@
         </div>
     </section>
 
-    <section id="future-recommendations">
-        <div class="container">
-            <h2>Future Recommendations</h2>
-            <div class="result-entry">
-                <div class="result-text">
-                    <h3>Leave-One-Well-Out (LOWO) Validation</h3>
-                    <p> To improve the model’s ability to generalize to new, unseen wells, a more effective validation strategy is needed. The <strong>Leave-One-Well-Out (LOWO)</strong> cross-validation method trains the model on data from three of the four wells and tests it on the remaining, completely unseen well. This process is repeated for each well, offering a thorough evaluation of the model’s real-world performance.</p>
-                    <p>An initial test using a Gradient Boosting Regressor (GBR) produced a training R<sup>2</sup> of <strong>0.76</strong> and a testing R<sup>2</sup> of <strong>0.48</strong>. An R<sup>2</sup> of 0.85 was achieved using a standard random train-test split on the combined dataset, indicating the model’s ability to learn patterns from that data. In contrast, the more rigorous LOWO validation, which tests generalization to entirely new wells, yielded a lower R<sup>2</sup> of 0.48. This gap underscores the need to improve the model’s generalization capabilities. While the high training score reflects strong learning, the drop in performance during LOWO validation reveals potential overfitting. This highlights the importance of the LOWO approach in identifying and addressing such issues, ensuring the model remains effective and reliable in real-world applications.</p>
-                </div>
-                <div>
-                    <img src="LOWO.png" alt="ROP Prediction vs. Depth with LOWO">
-                    <p class="caption">Figure 9: ROP prediction vs. depth, illustrating the results of a Leave-One-Well-Out validation test.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="conclusion">
         <div class="container" style="text-align: center;">
             <h2>Conclusion and Value Proposition</h2>
